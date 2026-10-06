@@ -45,7 +45,7 @@ Plus: loading state, network/timeout error, and wallet connected to the wrong ne
 | Gas / native currency | USDC (native balance uses 18 decimals) |
 | USDC ERC-20 interface | 0x3600000000000000000000000000000000000000 (6 decimals) |
 | Explorer | https://explorer.arc.io |
-| RPC | via env var `NEXT_PUBLIC_ARC_RPC_URL` (public endpoints may be permissioned; we will provide one) |
+| RPC | via env var `NEXT_PUBLIC_ARC_RPC_URL` (public endpoints may be permissioned; use your own free endpoint for development) |
 
 Show the USDC balance via the ERC-20 interface (6 decimals).
 These values were collected from third-party documentation on 07/10/2026. Check them against the official Arc docs before relying on them.
