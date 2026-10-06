@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1",
+  "sample": true,
+  "_note": "Returned with HTTP status 402. The x402 payment flow is built on our side; show a clear pay button placeholder.",
+  "status": "payment_required",
+  "payment": {
+    "price_usdc": "0.50",
+    "network": "arc",
+    "chain_id": 5042
+  }
+}

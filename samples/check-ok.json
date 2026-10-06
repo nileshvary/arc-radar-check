@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1",
+  "sample": true,
+  "_note": "SAMPLE DATA - fictitious addresses and numbers, not a real token",
+  "status": "ok",
+  "checked_at": "2026-10-07T08:00:00Z",
+  "chain": { "name": "Arc", "chain_id": 5042 },
+  "token": {
+    "address": "0x1111111111111111111111111111111111111111",
+    "name": "Sample Token",
+    "symbol": "SMPL",
+    "decimals": 18,
+    "total_supply": "1000000000"
+  },
+  "verdict": {
+    "level": "caution",
+    "score": 62,
+    "headline": "Burns are verified, but a few wallets hold most of the supply."
+  },
+  "holders": {
+    "count": 1284,
+    "top10_share_pct": 58.4,
+    "top_holders": [
+      { "address": "0x2222222222222222222222222222222222222222", "share_pct": 21.3, "label": "liquidity_pool" },
+      { "address": "0x3333333333333333333333333333333333333333", "share_pct": 12.1, "label": "deployer" },
+      { "address": "0x4444444444444444444444444444444444444444", "share_pct": 8.7, "label": null },
+      { "address": "0x5555555555555555555555555555555555555555", "share_pct": 6.2, "label": null },
+      { "address": "0x6666666666666666666666666666666666666666", "share_pct": 4.0, "label": "burn_address" }
+    ]
+  },
+  "burns": {
+    "claimed": true,
+    "verified": true,
+    "total_burned": "125000000",
+    "burned_pct_of_supply": 12.5,
+    "events": [
+      { "tx_hash": "0xaaaa000000000000000000000000000000000000000000000000000000000001", "amount": "75000000", "timestamp": "2026-09-20T14:02:11Z" },
+      { "tx_hash": "0xaaaa000000000000000000000000000000000000000000000000000000000002", "amount": "50000000", "timestamp": "2026-10-01T09:45:37Z" }
+    ]
+  },
+  "buybacks": {
+    "claimed": true,
+    "verified": false,
+    "note": "The announced buyback wallet shows no purchases in the last 30 days."
+  },
+  "risk_flags": [
+    {
+      "code": "HOLDER_CONCENTRATION",
+      "severity": "medium",
+      "title": "Top 10 wallets hold 58% of supply",
+      "explanation": "A small group of wallets could move the price sharply by selling."
+    },
+    {
+      "code": "BUYBACK_UNVERIFIED",
+      "severity": "high",
+      "title": "Buyback claim not confirmed on-chain",
+      "explanation": "The project says it buys back tokens, but no purchases were found from the stated wallet."
+    }
+  ],
+  "summary": "Sample Token has verified burns of 12.5% of supply. The claimed buybacks could not be confirmed on-chain. Ten wallets hold 58% of the supply, which is a concentration risk.",
+  "sources": [
+    { "type": "explorer", "label": "Token on Arc explorer", "url": "https://explorer.arc.io/" }
+  ]
+}
