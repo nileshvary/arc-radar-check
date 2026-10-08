@@ -98,7 +98,7 @@ Live testnet run for `0x3600000000000000000000000000000000000000` (top holders s
 {
   "schema_version": "0.1",
   "status": "ok",
-  "chain": { "name": "Arc", "chain_id": 5042 },
+  "chain": { "name": "Arc Testnet", "chain_id": 5042002 },
   "token": {
     "address": "0x3600000000000000000000000000000000000000",
     "name": "USDC",
