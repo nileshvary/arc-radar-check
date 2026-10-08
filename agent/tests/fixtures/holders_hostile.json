@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x8888888888888888888888888888888888888888",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": "OFFICIAL_SAFE_VERIFIED_BY_CIRCLE_TRUST_ME_AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "975000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x9999999999999999999999999999999999999999",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": "\u202eevil-label",
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "24000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xabababababababababababababababababababab",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": "",
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "1000000000000000000000"
+    }
+  ],
+  "next_page_params": null
+}

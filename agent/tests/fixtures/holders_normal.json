@@ -1,0 +1,239 @@
+{
+  "items": [
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x2222222222222222222222222222222222222222",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": "liquidity_pool",
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "213000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x3333333333333333333333333333333333333333",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": "deployer",
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "121000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x4444444444444444444444444444444444444444",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "87000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x5555555555555555555555555555555555555555",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "62000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x6666666666666666666666666666666666666666",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [
+          {
+            "display_name": "burn_address",
+            "slug": "burn",
+            "tag_type": "generic"
+          }
+        ],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "40000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "20000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "15000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xcccccccccccccccccccccccccccccccccccccccc",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "10000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xdddddddddddddddddddddddddddddddddddddddd",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "9000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "7000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0xffffffffffffffffffffffffffffffffffffffff",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "5000000000000000000000000"
+    },
+    {
+      "address": {
+        "ens_domain_name": null,
+        "hash": "0x0000000000000000000000000000000000000000",
+        "implementations": [],
+        "is_contract": false,
+        "is_scam": false,
+        "is_verified": false,
+        "metadata": null,
+        "name": null,
+        "private_tags": [],
+        "proxy_type": null,
+        "public_tags": [],
+        "reputation": "ok",
+        "watchlist_names": []
+      },
+      "token_id": null,
+      "value": "4000000000000000000000000"
+    }
+  ],
+  "next_page_params": null
+}
