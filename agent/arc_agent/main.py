@@ -3,7 +3,7 @@
 import json
 import sys
 
-from . import CHAIN, SCHEMA_VERSION, config
+from . import SCHEMA_VERSION, config
 from .analyze import build_flags, compute_stats, holder_address, pct_number, to_int
 from .errors import AgentError
 from .fetch import fetch_holders, fetch_token, http_get
@@ -31,7 +31,7 @@ def _error(code_error):
     }
 
 
-def build_report(address, token, holders):
+def build_report(address, token, holders, chain):
     """Turn raw explorer data into the output document."""
     stats = compute_stats(token, holders)
 
@@ -53,7 +53,7 @@ def build_report(address, token, holders):
     return {
         "schema_version": SCHEMA_VERSION,
         "status": "ok",
-        "chain": dict(CHAIN),
+        "chain": chain,
         "token": {
             "address": address,
             "name": name.text,
@@ -78,9 +78,10 @@ def run(address, get=http_get):
     """Return the output document for an address; never raises for expected failures."""
     try:
         require_evm_address(address)
+        chain = config.chain()
         token = fetch_token(address, get)
         holders = fetch_holders(address, get)
-        return build_report(address, token, holders)
+        return build_report(address, token, holders, chain)
     except AgentError as exc:
         return _error(exc)
 

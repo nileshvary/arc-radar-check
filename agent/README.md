@@ -40,6 +40,8 @@ copy .env.example .env          # macOS/Linux: cp .env.example .env
 | Variable | Required | Meaning |
 |---|---|---|
 | `ARC_EXPLORER_URL` | no | Explorer base URL, https only. Default `https://explorer.arc.io`. |
+| `ARC_CHAIN_ID` | no | Chain ID reported in the output. Default `5042` (Arc mainnet). |
+| `ARC_CHAIN_NAME` | no | Chain name reported in the output. Default `Arc`. |
 | `ARC_EXPLORER_API_KEY` | no | Blockscout API key. Sent as the `apikey` query parameter only if set. |
 
 Values are read from the environment, or from a `.env` file in the folder you run from. `.env` is
@@ -75,11 +77,15 @@ For a live run, use the Arc testnet explorer, which runs the same Blockscout API
 ```bash
 # Windows PowerShell
 $env:ARC_EXPLORER_URL = "https://explorer.testnet.arc.io"
+$env:ARC_CHAIN_ID = "5042002"
+$env:ARC_CHAIN_NAME = "Arc Testnet"
 python -m arc_agent.main 0x3600000000000000000000000000000000000000
 ```
 
-Note: `chain` in the output is always `{"name": "Arc", "chain_id": 5042}` as the task specifies,
-even when `ARC_EXPLORER_URL` points at testnet.
+The `chain` block in the output comes from `ARC_CHAIN_NAME` and `ARC_CHAIN_ID` (defaults `Arc` and
+`5042`). The tool does not ask the explorer which chain it serves, so set these to match the
+explorer you point at. `5042002` is the Arc testnet chain ID from third-party documentation; check
+it against the official Arc docs before relying on it.
 
 If the explorer operator provides an API key or an allow-listed endpoint, set
 `ARC_EXPLORER_API_KEY` and/or `ARC_EXPLORER_URL`.
@@ -144,7 +150,7 @@ Token 0x7777…7777 has 3 holders. One wallet holds 97.50% of supply. Warning: t
 | `EXPLORER_TIMEOUT` | No response within 10 s, twice |
 | `EXPLORER_UNAVAILABLE` | Blocked (403 / challenge page), 5xx after one retry, connection failure, non-JSON reply |
 | `BAD_RESPONSE` | JSON arrived but not in the expected shape |
-| `CONFIG_ERROR` | `ARC_EXPLORER_URL` is not an https URL |
+| `CONFIG_ERROR` | `ARC_EXPLORER_URL` is not an https URL, or `ARC_CHAIN_ID` / `ARC_CHAIN_NAME` is invalid |
 
 ## How to run the tests
 
@@ -167,7 +173,8 @@ Open each URL and save the JSON into `tests/fixtures/` under the given name:
 | https://explorer.arc.io/api/v2/tokens/0x3600000000000000000000000000000000000000/holders | `mainnet_holders_usdc.json` |
 
 `test_main.py::test_mainnet_fixtures_parse_if_present` runs against these files when both exist and
-is skipped otherwise.
+is skipped otherwise. Both files are included in this branch (saved on 7 October 2026); the field
+names the tool reads are the same on mainnet and testnet.
 
 ## Security
 

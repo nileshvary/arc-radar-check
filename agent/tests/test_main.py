@@ -18,6 +18,8 @@ HOSTILE = "0x7777777777777777777777777777777777777777"
 def clean_env(monkeypatch):
     monkeypatch.delenv("ARC_EXPLORER_URL", raising=False)
     monkeypatch.delenv("ARC_EXPLORER_API_KEY", raising=False)
+    monkeypatch.delenv("ARC_CHAIN_ID", raising=False)
+    monkeypatch.delenv("ARC_CHAIN_NAME", raising=False)
 
 
 def fixture_get(prefix):
@@ -67,6 +69,19 @@ def test_output_has_only_the_agreed_fields():
     assert set(result["holders"]["top_holders"][0]) == {"address", "share_pct", "label"}
     for flag in result["risk_flags"]:
         assert set(flag) == {"code", "severity", "title", "explanation"}
+
+
+def test_chain_comes_from_env(monkeypatch):
+    monkeypatch.setenv("ARC_CHAIN_ID", "5042002")
+    monkeypatch.setenv("ARC_CHAIN_NAME", "Arc Testnet")
+    result = cli.run(NORMAL, fixture_get("normal"))
+    assert result["chain"] == {"name": "Arc Testnet", "chain_id": 5042002}
+
+
+@pytest.mark.parametrize("value", ["abc", "-1", "0", "5042.5", "0x13b2"])
+def test_bad_chain_id_is_config_error(monkeypatch, value):
+    monkeypatch.setenv("ARC_CHAIN_ID", value)
+    assert_error(cli.run(NORMAL, fixture_get("normal")), "CONFIG_ERROR")
 
 
 # --- hostile token ----------------------------------------------------------
@@ -209,5 +224,10 @@ def test_mainnet_fixtures_parse_if_present():
 
     result = cli.run("0x3600000000000000000000000000000000000000", get)
     assert result["status"] == "ok", result
+    assert result["chain"] == {"name": "Arc", "chain_id": 5042}
+    assert result["token"]["decimals"] == 6
     assert result["holders"]["count"] > 0
+    assert len(result["holders"]["top_holders"]) == 10
     assert 0 <= result["holders"]["top10_share_pct"] <= 100
+    shares = [h["share_pct"] for h in result["holders"]["top_holders"]]
+    assert shares == sorted(shares, reverse=True)

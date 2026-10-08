@@ -6,7 +6,7 @@ MESSAGES = {
     "EXPLORER_TIMEOUT": "The Arc explorer did not respond in time.",
     "EXPLORER_UNAVAILABLE": "The Arc explorer refused the request or is unavailable.",
     "BAD_RESPONSE": "The Arc explorer returned data in an unexpected format.",
-    "CONFIG_ERROR": "ARC_EXPLORER_URL must be an https URL.",
+    "CONFIG_ERROR": "Configuration is invalid: ARC_EXPLORER_URL must be an https URL and ARC_CHAIN_ID a positive whole number.",
 }
 
 
