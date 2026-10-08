@@ -75,6 +75,12 @@ The JSON report is printed to stdout. Exit code is `0` for `status: ok` and `1` 
 For a live run, use the Arc testnet explorer, which runs the same Blockscout API and is open:
 
 ```bash
+# macOS / Linux
+export ARC_EXPLORER_URL=https://explorer.testnet.arc.io ARC_CHAIN_ID=5042002 ARC_CHAIN_NAME="Arc Testnet"
+python -m arc_agent.main 0x3600000000000000000000000000000000000000
+```
+
+```bash
 # Windows PowerShell
 $env:ARC_EXPLORER_URL = "https://explorer.testnet.arc.io"
 $env:ARC_CHAIN_ID = "5042002"
